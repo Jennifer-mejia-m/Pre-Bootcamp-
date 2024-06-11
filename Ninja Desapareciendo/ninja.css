@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: whitesmoke;
+}
+.container{
+    display: flex;
+    width: 500px;
+    height: 120px;
+    justify-content:space-around;
+    align-items: center;
+}
+.caja{
+    height: 100px;
+    width: 100px;
+}
+div.caja>img{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    border: 2px solid black;
+}
+button{
+    background-color: green;
+    font-weight: 500;
+    color: white;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    margin: 16px;
+    padding: 4px;
+}

@@ -1,0 +1,35 @@
+INSERT INTO `esquema_djos_y_ninjas`.`dojos` (`nombre`) VALUES ('lima');
+INSERT INTO `esquema_djos_y_ninjas`.`dojos` (`nombre`) VALUES ('piura');
+INSERT INTO `esquema_djos_y_ninjas`.`dojos` (`nombre`) VALUES ('chiclayo');
+
+DELETE FROM `esquema_djos_y_ninjas`.`dojos` WHERE (`id` = '6');
+DELETE FROM `esquema_djos_y_ninjas`.`dojos` WHERE (`id` = '7');
+DELETE FROM `esquema_djos_y_ninjas`.`dojos` WHERE (`id` = '8');
+
+INSERT INTO `esquema_djos_y_ninjas`.`dojos` (`nombre`) VALUES ('chimbote');
+INSERT INTO `esquema_djos_y_ninjas`.`dojos` (`nombre`) VALUES ('ica');
+INSERT INTO `esquema_djos_y_ninjas`.`dojos` (`nombre`) VALUES ('puno');
+
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Janko', 'Mejia', '18', '9');
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Massimo', 'Castro', '22', '9');
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Santiago', 'Hurtado', '21', '9');
+
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Milan', 'Ventura', '19', '10');
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Liam', 'Ventura', '20', '10');
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Lia', 'Diaz', '17', '10');
+
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Jade', 'Carrasco', '16', '11');
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Wilder', 'Ramos', '21', '11');
+INSERT INTO `esquema_djos_y_ninjas`.`ninjas` (`first_name`, `last_name`, `age`, `dojo_id`) VALUES ('Karla', 'Jimenez', '22', '11');
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id=ninjas.dojo_id
+WHERE dojos.id=9;
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id=ninjas.dojo_id
+WHERE dojos.id=11;
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id=ninjas.dojo_id
+WHERE ninjas.id=9;
