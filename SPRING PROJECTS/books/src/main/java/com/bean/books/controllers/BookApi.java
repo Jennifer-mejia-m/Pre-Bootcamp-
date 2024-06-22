@@ -58,6 +58,17 @@ public Book update(@PathVariable ("id")Long id,
 public void deleteBook(@PathVariable("id")Long id) {
     bookService.deleteBook(id);
     }
+
+@PostMapping("/inicio")
+public boolean validar(@RequestParam(value="clave1")String clave1,
+    @RequestParam(value="clave2")String clave2) {
+    if (clave1.equals(clave2)) {
+        return true;
+    }else{
+        return false;
+    }
+}
+    
     
 
 }
